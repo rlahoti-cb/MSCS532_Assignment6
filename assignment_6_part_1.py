@@ -45,7 +45,7 @@ def randomized_kth_smallest(input, k):
     if k <= len(lower):
         return deterministic_kth_smallest(lower, k)
     elif k <= len(lower) + len(equal):
-        return equal
+        return pivot
     else:
         return deterministic_kth_smallest(higher, k - len(lower) - len(equal))
 
