@@ -1,0 +1,26 @@
+Array state after insertions:  ['pizza', 'cheese stick', 'fudge']
+Access index 2:  fudge
+Deleted element at index 2:  fudge
+Array state after deletion:  ['pizza', 'cheese stick']
+
+Matrix state initially: 
+[1, 2, None]
+[None, None, 3]
+[None, None, 4]
+Access element at row 1 and column 2:  3
+Matrix state after deletion
+Matrix: 
+[1, 2, None]
+[None, None, None]
+[None, None, 4]
+
+Stack state after pushing elements (bottom -> top):  ['first element', 'second element', 'third element']
+Popping top element from stack:  third element
+Stack state after poping an element: ['first element', 'second element']
+
+Queue state after enqueueing elements (first -> last inserted):  ['first', 'second', 'third']
+Dequeueing an element:  first
+Queue state after dequeue:  ['second', 'third']
+
+Linked list state after insertions:  ['1', '2', '3']
+Linked list state after deletion of second node 2:  ['1', '3']
