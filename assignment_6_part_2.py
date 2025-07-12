@@ -1,78 +1,103 @@
 
+# Implements Array class that supports insert, delete, access functionality
 class Array:
+    # initialize data structure
     def __init__(self):
         self.data = []
 
+    # inserts value al at index idx
     def insert(self, idx, val):
         self.data.insert(idx, val)
 
+    # deletes value at index idx
     def delete(self, idx):
         if self._idx_exists(idx):
             return self.data.pop(idx)
         return None
 
+    # returns value at index idx
     def access(self, idx):
         if self._idx_exists(idx):
             return self.data[idx]
         return None
 
+    # internal function to check if index idx exists
     def _idx_exists(self, idx):
         if 0 <= idx < len(self.data):
             return True
         return False
 
+# Implements Matrix class that supports insert, access, delete functionality
 class Matrix:
+    # initialize data structure
     def __init__(self, num_rows, num_cols):
         self.data = [[None for _ in range(num_cols)] for _ in range(num_rows)]
 
+    # insert value val at row x col
     def insert(self, row, col, val):
         self.data[row][col] = val
 
+    # access value at row x col
     def access(self, row, col):
         return self.data[row][col]
 
+    # deletes element at row x col
     def delete(self, row, col):
         self.data[row][col] = None
 
+# Implements Stack class that supports push and pop functionality
 class Stack: 
+    # initialize data structure
     def __init__(self):
         self.stack = []
 
+    # push value val onto stack
     def push(self, val):
         self.stack.append(val)
 
+    # pops top element from stack
     def pop(self):
         if not self._is_empty():
             return self.stack.pop()
         return None
 
+    # internal function to check if stack is empty
     def _is_empty(self):
         return len(self.stack) == 0
 
+# Implements Queue class that supports enqueue and dequeue functionality
 class Queue:
+    # initialize data structure
     def __init__(self):
         self.queue = []
     
+    # enquue value val onto queue
     def enqueue(self, val):
         self.queue.append(val)
     
+    # dequeue next element from queue
     def dequeue(self):
         if not self._is_empty():
             return self.queue.pop(0)
         return None
     
+    # internal function to check if queue is empty
     def _is_empty(self):
         return len(self.queue) == 0
 
+# Node class which represents a node in a linked list with a value and a next pointer
 class Node:
     def __init__(self, val):
         self.value = val
         self.next = None
 
+# Implements LinkedList class which supports insert, delete, and traversal functionality
 class LinkedList:
+    # initialize data structure
     def __init__(self):
         self.head = None
     
+    # insert value val into linked list as a node
     def insert(self, val):
         next_node = Node(val)
         if not self.head:
@@ -83,6 +108,7 @@ class LinkedList:
             current = current.next
         current.next = next_node
     
+    # deletes value val from linked list
     def delete(self, val):
         current = self.head
         previous = None
@@ -97,6 +123,7 @@ class LinkedList:
             current = current.next
         return False
     
+    # traverses linked list
     def traverse(self):
         output = []
         current = self.head
@@ -105,6 +132,7 @@ class LinkedList:
             current = current.next
         return output
 
+# executes helper functions to demo usage of the various elementary data structures
 def part_2_demonstration():
     array_demo()
     matrix_demo()
@@ -112,6 +140,7 @@ def part_2_demonstration():
     queue_demo()
     linked_list_demo()
 
+# array demo
 def array_demo():
     array = Array()
     array.insert(0, "pizza")
@@ -123,6 +152,7 @@ def array_demo():
     print("Array state after deletion: ", array.data)
     print()
 
+# matrix demo
 def matrix_demo():
     matrix = Matrix(3,3)
     matrix.insert(0, 0, 1)
@@ -144,6 +174,7 @@ def matrix_demo():
     
     print()
 
+# stack demo
 def stack_demo():
     stack = Stack()
     stack.push("first element")
@@ -156,6 +187,7 @@ def stack_demo():
 
     print()
 
+# queue demo
 def queue_demo():
     queue = Queue()
     queue.enqueue("first")
@@ -168,6 +200,7 @@ def queue_demo():
 
     print()
 
+# linked list demo
 def linked_list_demo():
     linked_list = LinkedList()
     linked_list.insert("1")
