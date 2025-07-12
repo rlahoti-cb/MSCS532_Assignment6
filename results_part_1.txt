@@ -1,0 +1,24 @@
+(base) Richas-MacBook-Pro:MSCS532_Assignment6 richalahoti$ python3 assignment_6_part_1.py
+Executing test for input size 10000 and k set to 858
+Applying deterministic algo to 10000 random elements took 0.0069010257720947266
+Applying randomized algo to 10000 random elements took 0.006086111068725586
+Applying deterministic algo to 10000 sorted elements took 0.0047969818115234375
+Applying randomized algo to 10000 sorted elements took 0.0030469894409179688
+Applying deterministic algo to 10000 reversed sorted elements took 0.005643129348754883
+Applying randomized algo to 10000 reversed sorted elements took 0.0014393329620361328
+
+Executing test for input size 100000 and k set to 23832
+Applying deterministic algo to 100000 random elements took 0.07664632797241211
+Applying randomized algo to 100000 random elements took 0.09770679473876953
+Applying deterministic algo to 100000 sorted elements took 0.06754732131958008
+Applying randomized algo to 100000 sorted elements took 0.0368809700012207
+Applying deterministic algo to 100000 reversed sorted elements took 0.06876325607299805
+Applying randomized algo to 100000 reversed sorted elements took 0.03197789192199707
+
+Executing test for input size 1000000 and k set to 669635
+Applying deterministic algo to 1000000 random elements took 1.1533229351043701
+Applying randomized algo to 1000000 random elements took 0.696422815322876
+Applying deterministic algo to 1000000 sorted elements took 0.8832230567932129
+Applying randomized algo to 1000000 sorted elements took 0.9038698673248291
+Applying deterministic algo to 1000000 reversed sorted elements took 0.7966532707214355
+Applying randomized algo to 1000000 reversed sorted elements took 0.8320279121398926
